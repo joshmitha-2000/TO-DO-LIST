@@ -1,0 +1,195 @@
+/* Global and full-screen settings */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Task Manager Styles */
+.task-manager {
+  width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-manager h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.task-manager form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.task-manager input, .task-manager textarea, .task-manager select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+}
+
+.task-manager button[type="submit"] {
+  background-color: rgb(26, 26, 112);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-manager button[type="submit"]:hover {
+  background-color:rgb(47, 47, 168);
+}
+
+.task-manager ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-manager li {
+  padding: 20px;
+  border-bottom: 1px solid #ccc; /* Added border for list items */
+}
+
+/* Task List and Layout */
+.task-list {
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: flex-start; /* Aligns content at the top */
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.task-list h1 {
+  text-align: center; /* Centers the heading horizontally */
+  margin-bottom: 20px;
+  margin-left: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Task Item Styles */
+.task-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Adjusted width for the task item */
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-info span {
+  margin-right: 20px; /* Space between task name, deadline, and priority */
+}
+
+/* Buttons and Action Styles */
+.task-buttons {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+}
+
+.task-buttons button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.task-buttons .delete-btn {
+  background-color:#fff;
+  color: #fff;
+}
+
+.task-buttons .complete-btn {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.task-buttons .delete-btn:hover {
+  background-color: #dad5d5;
+}
+
+.task-buttons .complete-btn:hover {
+  background-color: #3e8e41;
+}
+.notify{
+  text-align: center;
+ 
+}
+.notify>h1{
+  font-size: 2rem;
+  color: rgb(1, 1, 59);
+}
+.notify > li{
+  font-size: large;
+}
+.dlt{
+  mix-blend-mode: multiply;
+}
+
+/* Navigation Styles */
+nav {
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(26, 26, 112);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* margin-bottom: 20px; */
+}
+
+nav ul {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 10px;
+
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  
+}
+
+nav ul li a:hover {
+  background-color:rgb(47, 47, 168);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .task-list {
+      grid-template-columns: 1fr; 
+  }
+
+  nav ul {
+      flex-direction: column;
+  }
+
+  nav ul li {
+      margin: 5px 0;
+  }
+}
